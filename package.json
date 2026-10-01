@@ -1,0 +1,15 @@
+{
+  "name": "taskboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack task manager: React + Express + SQLite, JWT auth, per-user data ownership.",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
